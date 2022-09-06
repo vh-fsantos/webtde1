@@ -154,6 +154,27 @@ svg {
     gap: 2rem;
 }
 
+.row-btw{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.row{
+    display: flex;
+}
+
+.clr-black{
+    color: black;
+}
+
+.fs-200{
+    font-size: .75rem;
+}
+
+.ch-400{
+    max-width: 20ch;
+}
 
 /* General Styling */
 
@@ -163,11 +184,12 @@ ul {
 
 a {
     text-decoration: none;
-    color: var(--clr-primary);
+    cursor: pointer;
 }
 
 body {
     font-family: var(--ff-primay);
+    scroll-behavior: smooth;
 }
 
 
@@ -183,7 +205,6 @@ body {
     background-color: var(--clr-secondary);
     box-shadow: 0 0 0 100vmax var(--clr-secondary);
     clip-path: inset(0 -100vmax);
-    color: var(--clr-primary);
     text-transform: uppercase;
     padding-block: 1.175rem;
 }
@@ -193,7 +214,84 @@ body {
     font-size: .75rem;
 }
 
+.black-bar>ul>li>a{
+    color: var(--clr-primary);
+}
+
 .icon-link {
     display: flex;
     gap: .5rem;
+}
+
+a:hover{
+    opacity: .6;
+}
+
+.header{
+    padding-block: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.button{
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    text-align: center;
+    transition: background-color .5s ease, color .5s ease;
+}
+
+.button[data-color="red"]{
+    color: #ffffff;
+    background-color: #cb0003;
+}
+
+.button > i {
+    font-size: 1rem;
+}
+
+
+.button:hover{
+    opacity: .6;
+}
+
+.input{
+    background: transparent;
+    border-style: none;
+    font-size: .8rem;
+    letter-spacing: .6px;
+    padding: 0;
+    outline: none;
+    color: gray;
+    border: 2px solid gray;
+    border-radius: 10px;
+    padding: 10px 5px;
+}
+
+.primary-navigation{
+    border-top: 2px solid black;
+    border-bottom: 1px solid gray;
+    margin-block-start: 20px;
+    padding-block: 10px;
+}
+
+.primary-navigation>ul>li>a{
+    color: black;
+    font-size: .8rem;
+    text-transform: uppercase;
+    font-weight: var(--fw-bold);
+}
+
+.main-section{
+    flex-wrap: wrap;
+    gap: 45px;
+    justify-content: center;
+}
+
+.article-title{
+    font-weight: var(--fw-bold);
+    font-size: 1.35rem;
+    max-width: 22ch;
 }
