@@ -1,0 +1,199 @@
+@font-face {
+    font-family: 'UOLText';
+    src: url("../fonts/uol-text-lighter.ttf");
+    font-display: swap;
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'UOLText';
+    src: url("../fonts/uol-text-light.ttf");
+    font-display: swap;
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'UOLText';
+    src: url("../fonts/uol-text-regular.ttf");
+    font-display: swap;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'UOLText';
+    src: url("../fonts/uol-text-bold.ttf");
+    font-display: swap;
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'UOLText';
+    src: url("../fonts/uol-text-bolder.ttf");
+    font-display: swap;
+    font-style: normal;
+    font-weight: 900;
+}
+
+:root {
+    --clr-primary: #ffffff;
+    --clr-secondary: #1a1a1a;
+    --ff-primay: UOLText, sans-serif;
+    --fw-lighter: 100;
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-bold: 700;
+    --fw-bolder: 900;
+}
+
+
+/* CSS RESET https://piccalil.li/blog/a-modern-css-reset */
+
+
+/* Box sizing rules */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* Remove default margin */
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+/* Set core root defaults */
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+
+/* Set core body defaults */
+
+body {
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+
+/* A elements that don't have a class get default styles */
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+
+/* Make images easier to work with */
+
+img,
+picture,
+svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+/* Utility Classes */
+
+.container {
+    --max-width: 1190px;
+    --padding: 1rem;
+    width: min(var(--max-width), 100% - (var(--padding) * 2));
+    margin-inline: auto;
+}
+
+.gap-100 {
+    gap: 1rem;
+}
+
+.gap-200 {
+    gap: 2rem;
+}
+
+
+/* General Styling */
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--clr-primary);
+}
+
+body {
+    font-family: var(--ff-primay);
+}
+
+
+/* Header */
+
+
+/* Black Bar */
+
+.black-bar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--clr-secondary);
+    box-shadow: 0 0 0 100vmax var(--clr-secondary);
+    clip-path: inset(0 -100vmax);
+    color: var(--clr-primary);
+    text-transform: uppercase;
+    padding-block: 1.175rem;
+}
+
+.black-bar>ul {
+    display: flex;
+    font-size: .75rem;
+}
+
+.icon-link {
+    display: flex;
+    gap: .5rem;
+}
